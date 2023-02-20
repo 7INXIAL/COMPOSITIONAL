@@ -1,0 +1,23 @@
+{
+  "id": "3867275",
+  "name": "惊鸿",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31310820",
+      "name": "中英文切换-英文",
+      "font_class": "zhongyingwenqiehuan-yingwen",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "31310821",
+      "name": "中英文切换-中文",
+      "font_class": "zhongyingwenqiehuan-zhongwen",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    }
+  ]
+}
