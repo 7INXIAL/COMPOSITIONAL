@@ -9,7 +9,7 @@ interface MESSAGES {
 const messages: MESSAGES = {};
 // 读取文件
 const files: { [key: string]: object } = import.meta.glob(
-  "./modules/*/locale/*.ts",
+  "../src/modules/*/locale/*.ts",
   {
     eager: true,
     import: "default",
@@ -20,7 +20,7 @@ const files: { [key: string]: object } = import.meta.glob(
 for (const url in files) {
   // 获取 模块/语言
   const [name, locale] = url
-    .replace(/^\.\/|modules\/|\/locale|\.ts/g, "")
+    .replace(/^\.\.\/src|\/modules\/|\/locale|\.ts/g, "")
     .split("/");
 
   if (name && locale) {

@@ -1,23 +1,51 @@
 {
-  "id": "3867275",
-  "name": "惊鸿",
+  "id": "3908088",
+  "name": "7INXIAL",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
     {
-      "icon_id": "31310820",
-      "name": "中英文切换-英文",
-      "font_class": "zhongyingwenqiehuan-yingwen",
-      "unicode": "e616",
-      "unicode_decimal": 58902
+      "icon_id": "32771465",
+      "name": "语言切换",
+      "font_class": "yuyanqiehuan1",
+      "unicode": "e70b",
+      "unicode_decimal": 59147
     },
     {
-      "icon_id": "31310821",
-      "name": "中英文切换-中文",
-      "font_class": "zhongyingwenqiehuan-zhongwen",
-      "unicode": "e617",
-      "unicode_decimal": 58903
+      "icon_id": "8289033",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e870",
+      "unicode_decimal": 59504
+    },
+    {
+      "icon_id": "1469225",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e85a",
+      "unicode_decimal": 59482
+    },
+    {
+      "icon_id": "5483402",
+      "name": "太阳",
+      "font_class": "taiyang",
+      "unicode": "e6db",
+      "unicode_decimal": 59099
+    },
+    {
+      "icon_id": "21768210",
+      "name": "语言切换",
+      "font_class": "yuyanqiehuan",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "29548736",
+      "name": "Clear Night晴-夜晚",
+      "font_class": "ClearNight-qing-yewan",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
     }
   ]
 }

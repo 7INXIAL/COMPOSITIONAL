@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 3867275 */
-  src: url('iconfont.woff2?t=1674034239679') format('woff2'),
-       url('iconfont.woff?t=1674034239679') format('woff'),
-       url('iconfont.ttf?t=1674034239679') format('truetype');
+  font-family: "iconfont"; /* Project id 3908088 */
+  src: url('iconfont.woff2?t=1676966830731') format('woff2'),
+       url('iconfont.woff?t=1676966830731') format('woff'),
+       url('iconfont.ttf?t=1676966830731') format('truetype');
 }
 
 .iconfont {
@@ -13,11 +13,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-zhongyingwenqiehuan-yingwen:before {
-  content: "\e616";
+.icon-yuyanqiehuan1:before {
+  content: "\e70b";
 }
 
-.icon-zhongyingwenqiehuan-zhongwen:before {
-  content: "\e617";
+.icon-xingxing:before {
+  content: "\e870";
+}
+
+.icon-github:before {
+  content: "\e85a";
+}
+
+.icon-taiyang:before {
+  content: "\e6db";
+}
+
+.icon-yuyanqiehuan:before {
+  content: "\e633";
+}
+
+.icon-ClearNight-qing-yewan:before {
+  content: "\e60a";
 }
 

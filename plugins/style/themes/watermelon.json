@@ -1,0 +1,9 @@
+[
+  ["--al-color", "#000"],
+  ["--al-relax", "#0dc028"],
+  ["--al-notice", "#d7ec15"],
+  ["--al-nervous", "#ec2424"],
+  ["--al-auxiliary", "#afb7b1"],
+  ["--al-border-color", "#d91cb1"],
+  ["--al-background-color", "#ffd04b"]
+]

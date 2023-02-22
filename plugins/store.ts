@@ -2,7 +2,7 @@
 const store: { [key: string]: any } = {};
 
 // 动态引入文件
-const files = import.meta.glob("./modules/*/store.ts", {
+const files = import.meta.glob("../src/modules/*/store.ts", {
   eager: true,
   import: "default",
 });
@@ -10,7 +10,7 @@ const files = import.meta.glob("./modules/*/store.ts", {
 // 读取文件列表
 for (const url in files) {
   // 名称
-  const name = url.replace(/^\.\/|modules\/|\/store\.ts/g, "");
+  const name = url.replace(/^\.\.\/src|\/modules\/|\/store\.ts/g, "");
   // 赋值
   store[name] = files[url];
 }

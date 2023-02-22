@@ -1,0 +1,14 @@
+:root {
+  /* 字体颜色 */
+  --al-color: #fff;
+  --al-relax: #10a574;
+  --al-notice: #d7ec15;
+  --al-nervous: #ec2424;
+  --al-auxiliary: #afb7b1;
+
+  --al-border-color: #1ca8d9;
+  --al-border-relax: #000;
+
+  /* 背景颜色 */
+  --al-background-color: #ffffff;
+}

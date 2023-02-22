@@ -7,7 +7,7 @@ interface Files {
 }
 
 // 动态引入
-const files: Files = import.meta.glob("./modules/*/route.ts", {
+const files: Files = import.meta.glob("../src/modules/*/route.ts", {
   eager: true,
   import: "default",
 });
@@ -25,7 +25,13 @@ const router = createRouter({
   routes,
 });
 
-// 全局前置守卫
+// 全局前置守卫 - 路由拦截
+// 模块化 - 模块按钮路由权限表如下
+// const RoutingAuthority = {
+//   "/Module1": new Set(["view", "edit", "export"]),
+//   "/Module1": new Set(["use"]),
+//   ...
+// };
 router.beforeEach((to, from, next) => {
   next();
 });

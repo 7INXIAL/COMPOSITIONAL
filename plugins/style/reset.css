@@ -1,6 +1,9 @@
+html,
+body,
 #app {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .icon {
@@ -9,6 +12,39 @@
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
+}
+
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+video:focus {
+  outline: none;
+}
+/*控制整个滚动条*/
+::-webkit-scrollbar {
+  background-color: #efeeee;
+  width: 6px;
+  height: 6px;
+  background-clip: padding-box;
+}
+
+/*滚动条两端方向按钮*/
+::-webkit-scrollbar-button {
+  width: 2px;
+  background-color: #000;
+}
+
+/*滚动条中间滑动部分*/
+::-webkit-scrollbar-thumb {
+  background-color: #555252;
+  border-radius: 5px;
+}
+
+/*滚动条右下角区域*/
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 
 *:where(
@@ -106,29 +142,4 @@ pre {
 /* Revert Modal native behavior */
 :where(dialog:modal) {
   all: revert;
-}
-
-/*控制整个滚动条*/
-::-webkit-scrollbar {
-  background-color: #efeeee;
-  width: 6px;
-  height: 6px;
-  background-clip: padding-box;
-}
-
-/*滚动条两端方向按钮*/
-::-webkit-scrollbar-button {
-  width: 2px;
-  background-color: #000;
-}
-
-/*滚动条中间滑动部分*/
-::-webkit-scrollbar-thumb {
-  background-color: #555252;
-  border-radius: 5px;
-}
-
-/*滚动条右下角区域*/
-::-webkit-scrollbar-corner {
-  background-color: transparent;
 }
