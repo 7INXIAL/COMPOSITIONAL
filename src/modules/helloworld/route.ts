@@ -4,7 +4,7 @@ export default [
     component: () => import("./views/index.vue"),
   },
   {
-    path: "/login",
+    path: "/single",
     component: () => import("./views/index.vue"),
   },
 ];

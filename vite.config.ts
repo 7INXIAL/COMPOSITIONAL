@@ -42,7 +42,7 @@ export default defineConfig({
           "@vueuse/core": ["useCssVar "],
         },
       ],
-      dirs: ["./plugins/hooks"],
+      dirs: ["./src/auto-imports"],
       dts: "./auto-imports.d.ts",
       resolvers: [ElementPlusResolver()],
       eslintrc: {

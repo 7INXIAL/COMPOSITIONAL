@@ -2,8 +2,7 @@ import { createApp } from "vue";
 import { createPinia } from "pinia";
 const pinia = createPinia();
 
-import "../plugins";
-import { router, i18n, ElementIcons } from "../plugins/index";
+import * as ElementIcons from "./element-icons";
 
 import Global from "./modules/global/views/index.vue";
 const app = createApp(Global);

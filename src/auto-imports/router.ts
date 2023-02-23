@@ -7,7 +7,7 @@ interface Files {
 }
 
 // 动态引入
-const files: Files = import.meta.glob("../src/modules/*/route.ts", {
+const files: Files = import.meta.glob("../modules/*/route.ts", {
   eager: true,
   import: "default",
 });
@@ -36,4 +36,4 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-export default router;
+export { router };

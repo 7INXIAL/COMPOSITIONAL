@@ -11,8 +11,8 @@
             </template>
             <template #fallback> Loading... </template>
           </suspense>
-        </router-view></el-main
-      >
+        </router-view>
+      </el-main>
     </el-container>
 
     <!-- 内容布局 -->
@@ -38,7 +38,7 @@
 <script lang="ts" setup>
 const route = useRoute();
 const single = computed(() =>
-  ["login"].some((path) => route.path.includes(path))
+  ["single"].some((path) => route.path.includes(path))
 );
 </script>
 
@@ -46,18 +46,15 @@ const single = computed(() =>
 .global-wrap {
   width: 100%;
   height: 100%;
-  background-color: var(--al-background-color);
   overflow: hidden;
   .el-container {
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
   .el-main {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
     overflow: hidden;
   }
 }

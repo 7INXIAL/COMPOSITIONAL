@@ -3,27 +3,23 @@
     <el-row>
       <el-col :span="24">
         <div class="introduce">
-          <video autoplay muted loop class="video-el">
-            <source :src="car1" type="video/mp4" />
+          <video :key="theme" autoplay muted loop class="video-el">
+            <source :src="videoUrl" type="video/mp4" />
           </video>
           <div class="label">COMPOSITIONAL</div>
-          <div class="describe">VITE 基于 VUE 3 的 TypeScript 计划</div>
+          <div class="describe">{{ $t("helloworld.describe") }}</div>
         </div>
       </el-col>
     </el-row>
     <el-row>
       <el-col :span="24">
         <div class="item">
-          <div class="label">WHY?</div>
+          <div class="label">You should know</div>
           <div class="content">
-            <div>
-              COMPOSITIONAL has integrated functions such as request, routing,
-              storage, internationalization, and skinning
-            </div>
-            <div>Engineering and Modular Development</div>
-            <div>Imperatively create modules or components</div>
-            <div>Automatically import hooks or components</div>
-            <div>check the details</div>
+            <div class="text">{{ $t("helloworld.integrated") }}</div>
+            <div class="text">{{ $t("helloworld.modular") }}</div>
+            <div class="text">{{ $t("helloworld.imperative") }}</div>
+            <div class="text">{{ $t("helloworld.autoimport") }}</div>
           </div>
         </div>
       </el-col>
@@ -32,6 +28,16 @@
 </template>
 <script lang="ts" setup>
 import car1 from "assets/video/car1.mp4";
+import car2 from "assets/video/car2.mp4";
+import car3 from "assets/video/car3.mp4";
+const [theme] = useTheme();
+const _videoUrl = {
+  sunny: car1,
+  night: car2,
+  star: car3,
+};
+
+const videoUrl = computed(() => _videoUrl[theme.value]);
 </script>
 <style lang="scss" scoped>
 .helloworld-wrap {
@@ -40,6 +46,7 @@ import car1 from "assets/video/car1.mp4";
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background-color: var(--background-color);
   .introduce {
     display: flex;
     width: 100%;
@@ -48,6 +55,8 @@ import car1 from "assets/video/car1.mp4";
     align-items: center;
     font-size: 72px;
     justify-content: center;
+    background-color: #fff;
+    color: var(--logo-color);
     .describe {
       margin-left: 48px;
       font-size: 24px;
@@ -63,8 +72,14 @@ import car1 from "assets/video/car1.mp4";
     padding: 24px;
 
     .label {
-      border-bottom: 2px solid seagreen;
+      border-bottom: 2px solid var(--border-color);
       font-size: 36px;
+    }
+    .content {
+      font-size: 16px;
+      .text {
+        margin: 12px 0;
+      }
     }
   }
 }

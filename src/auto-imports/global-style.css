@@ -1,0 +1,74 @@
+/* 初始样式 */
+:root {
+  --background-color: #218a91;
+  --color: #fff;
+  --logo-color: #9f0404;
+  --border-color: #262a3c;
+}
+
+/* 全局样式类 */
+
+/* 样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+#app {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+/*控制整个滚动条*/
+::-webkit-scrollbar {
+  background-color: #efeeee;
+  width: 6px;
+  height: 6px;
+  background-clip: padding-box;
+}
+
+/*滚动条两端方向按钮*/
+::-webkit-scrollbar-button {
+  width: 2px;
+  background-color: #000;
+}
+
+/*滚动条中间滑动部分*/
+::-webkit-scrollbar-thumb {
+  background-color: #555252;
+  border-radius: 5px;
+}
+
+/*滚动条右下角区域*/
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+video:focus {
+  outline: none;
+}
