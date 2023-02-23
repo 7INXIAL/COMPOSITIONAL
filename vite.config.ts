@@ -39,7 +39,7 @@ export default defineConfig({
         "vue",
         "vue-router",
         {
-          "@vueuse/core": ["useCssVar "],
+          "@vueuse/core": ["useCssVar"],
         },
       ],
       dirs: ["./src/auto-imports"],
