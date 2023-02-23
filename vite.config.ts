@@ -13,7 +13,7 @@ export default defineConfig({
     base: "/",
     proxy: {
       "^/api": {
-        target: "http://172.17.30.13:18888",
+        target: "http://www.google.com",
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/posts/, ''),
       },
