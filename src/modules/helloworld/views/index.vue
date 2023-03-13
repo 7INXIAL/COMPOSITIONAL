@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="24">
         <div class="introduce">
-          <video :key="theme" autoplay muted loop class="video-el">
+          <video :key="topic" autoplay muted loop class="video-el">
             <source :src="videoUrl" type="video/mp4" />
           </video>
           <div class="label">COMPOSITIONAL</div>
@@ -30,14 +30,14 @@
 import car1 from "assets/video/car1.mp4";
 import car2 from "assets/video/car2.mp4";
 import car3 from "assets/video/car3.mp4";
-const [theme] = useTheme();
+const topic = useTopic();
 const _videoUrl = {
   sunny: car1,
   night: car2,
   star: car3,
 };
 
-const videoUrl = computed(() => _videoUrl[theme.value]);
+const videoUrl = computed(() => _videoUrl[topic.value]);
 </script>
 <style lang="scss" scoped>
 .helloworld-wrap {

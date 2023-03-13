@@ -1,6 +1,8 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 const pinia = createPinia();
+import "./variable.css";
+import "element-plus/dist/index.css";
 
 import * as ElementIcons from "./element-icons";
 

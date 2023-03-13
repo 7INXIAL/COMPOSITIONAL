@@ -1,20 +1,22 @@
 <template>
   <div class="component-topbar">
-    <div class="user">7INXIAL</div>
+    <div class="user">
+      <a href="https://github.com/7INXIAL" target="_blank"> 7INXIAL </a>
+    </div>
     <svg class="icon" aria-hidden="true">
       <use
-        v-if="theme === 'sunny'"
-        @click="setTheme('night')"
+        v-if="topic === 'sunny'"
+        @click="topic = 'night'"
         xlink:href="#icon-taiyang"
       ></use>
       <use
-        v-if="theme === 'night'"
-        @click="setTheme('star')"
+        v-if="topic === 'night'"
+        @click="topic = 'star'"
         xlink:href="#icon-ClearNight-qing-yewan"
       ></use>
       <use
-        v-if="theme === 'star'"
-        @click="setTheme('sunny')"
+        v-if="topic === 'star'"
+        @click="topic = 'sunny'"
         xlink:href="#icon-xingxing"
       ></use>
     </svg>
@@ -23,10 +25,8 @@
         <span class="iconfont icon-yuyanqiehuan"></span>
       </template>
       <div class="language">
-        <div v-if="locale == 'en_US'" @click="setLanguage('zh_CN')">中文</div>
-        <div v-if="locale == 'zh_CN'" @click="setLanguage('en_US')">
-          English
-        </div>
+        <div v-if="locale == 'en_US'" @click="locale = 'zh_CN'">中文</div>
+        <div v-if="locale == 'zh_CN'" @click="locale = 'en_US'">English</div>
       </div>
     </el-popover>
     <a href="https://github.com/7INXIAL/COMPOSITIONAL" target="_blank">
@@ -35,8 +35,8 @@
   </div>
 </template>
 <script lang="ts" setup>
-const [locale, setLanguage] = useLocale();
-const [theme, setTheme] = useTheme();
+const locale = useLocale();
+const topic = useTopic();
 </script>
 
 <style lang="scss" scoped>

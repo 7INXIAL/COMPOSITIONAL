@@ -40,6 +40,10 @@ const route = useRoute();
 const single = computed(() =>
   ["single"].some((path) => route.path.includes(path))
 );
+const dfddd = useTopic();
+setTimeout(() => {
+  dfddd.value = "sunny";
+}, 1000);
 </script>
 
 <style lang="scss" scoped>

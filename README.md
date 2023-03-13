@@ -12,7 +12,7 @@
 
 ### 自动引入
 
-`vue` `vue-router` `request` `router` `useLocale` `useStore` `useTheme` `element-plus` `component in src/components`
+`vue` `vue-router` `request` `router` `useLocale` `useServicer` `useStore` `useTopic` `element-plus` `component in src/components`
 
 ### 工程化
 

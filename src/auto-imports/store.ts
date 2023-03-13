@@ -1,27 +1,21 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const store: { [key: string]: any } = {};
+const store = {} as INTERNAL_STORE;
 
-// 动态引入文件
 const files = import.meta.glob("../modules/*/store.ts", {
   eager: true,
   import: "default",
-});
+}) as {
+  [key: string]: () => any;
+};
 
-// 读取文件列表
 for (const url in files) {
-  // 名称
-  const name = url.replace(/modules|store\.ts|\.?\/?/g, "");
-  // 赋值
-  store[name] = files[url];
+  const key = url.replace(/modules|store\.ts|\.?\/?/g, "");
+  store[<keyof INTERNAL_STORE>key] = files[url];
 }
 
-export const useStore = (name: string) => {
-  if (!name) {
-    throw new Error("请输入你要使用 Store 的模块名称");
-  } else {
-    if (name in store) {
-      return store[name]();
-    }
-    throw new Error(`模块 ${name} 尚未定义 Store`);
+export const useStore = (key: keyof INTERNAL_STORE) => {
+  if (key in store) {
+    return store[key]();
   }
+  throw new Error(`状态管理 -${key}- 尚未定义`);
 };

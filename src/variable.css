@@ -1,4 +1,5 @@
-/* 初始样式 */
+/* 主题变量 */
+/* :root.sunny */
 :root {
   --background-color: #218a91;
   --color: #fff;
@@ -6,7 +7,19 @@
   --border-color: #262a3c;
 }
 
-/* 全局样式类 */
+:root.night {
+  --background-color: #262a3c;
+  --color: #fff;
+  --logo-color: #218a91;
+  --border-color: #9f0404;
+}
+
+:root.star {
+  --background-color: #9f0404;
+  --color: #fff;
+  --logo-color: #262a3c;
+  --border-color: #218a91;
+}
 
 /* 样式重置 */
 * {
@@ -26,6 +39,7 @@ body,
   height: 100vh;
   overflow: hidden;
 }
+
 #app {
   background-color: var(--background-color);
   color: var(--color);
